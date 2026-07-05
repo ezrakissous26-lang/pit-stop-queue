@@ -95,8 +95,8 @@ async function searchByNumber(idCar) {
             break;
             return 0;
         }
-        console.log(`Error: No car found with number #${idCar} in the current race.`)
     }
+        console.log(`Error: No car found with number #${idCar} in the current race.`)
 
         // for (const item of result.cars) {
         //     listCarNumber.push(item.carNumber)
