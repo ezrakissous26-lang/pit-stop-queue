@@ -88,12 +88,15 @@ async function searchByNumber(idCar) {
     try {
         const result = await fileService.readFile()
         const res = result.cars
-        const numberCar = res.find(item => item.carNumber == idCar)
-        if (numberCar) {
-            console.log(`Found car #${res.carNumber} | Driver: ${res.driverName} | Status: ${res.status}`)
-        } else {
-            console.log(`Error: No car found with number #${idCar} in the current race.`)
+        // const numberCar = res.find(item => item.carNumber == idCar)
+        for (const item of res) {
+            if (item.carNumber == idCar) {
+            console.log(`Found car #${item.carNumber} | Driver: ${item.driverName} | Status: ${item.status}`)
+            break;
+            return 0;
         }
+        console.log(`Error: No car found with number #${idCar} in the current race.`)
+    }
 
         // for (const item of result.cars) {
         //     listCarNumber.push(item.carNumber)
