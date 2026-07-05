@@ -8,3 +8,7 @@ function readFile(callback) {
         })
     })
 }
+
+module.exports = {
+    readFile
+}

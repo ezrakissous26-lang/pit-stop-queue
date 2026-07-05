@@ -22,4 +22,6 @@ async function writeToJson() {
     }
 }
 
-writeToJson()
+module.exports = {
+    writeToJson
+}
